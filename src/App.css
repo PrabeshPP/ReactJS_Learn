@@ -37,3 +37,18 @@ h1{
   color: red;
   text-align: center;
 }
+
+.main{
+  height: 150px;
+  width: 100vw;
+  background-color: crimson;
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: center;
+  
+}
+
+.main h1{
+  color: white;
+}
+
