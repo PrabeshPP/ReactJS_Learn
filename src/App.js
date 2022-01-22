@@ -1,12 +1,13 @@
 import './App.css';
 import React  from 'react';
+import ExpenseItem from './components/ExpenseItem';
 
 function App() {
   return (
     <>
     <div className='main'>
-    <h1>Hello User!</h1>
-    <h2>You have been hacked!</h2>
+   <div>Add new Expense</div>
+   <ExpenseItem/>
     </div>
     </>
   );

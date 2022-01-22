@@ -46,9 +46,13 @@ h1{
   overflow: hidden;
   text-align: center;
   
+  
 }
 
-.main h1{
-  color: white;
+.main div{
+  height: 50px;
+  width: 150px;
+  background-color: aqua;
+  border-radius: 20px;
 }
 
