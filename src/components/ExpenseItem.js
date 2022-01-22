@@ -6,7 +6,7 @@ function ExpenseItem(){
         <>
         <h1>Expense Item in there</h1>
         </>
-    )
+    );
 
 }
 
