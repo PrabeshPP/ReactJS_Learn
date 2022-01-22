@@ -1,11 +1,12 @@
 import React from "react";
-
+import './ExpenseItem.css'
 
 function ExpenseItem(){
     return (
-        <>
-        <h1>Expense Item in there</h1>
-        </>
+        <div className="ExpenseItem-main">
+       <div>Date</div>
+       <div><h2>Title</h2>Amount</div>
+        </div>
     );
 
 }

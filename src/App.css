@@ -38,21 +38,6 @@ h1{
   text-align: center;
 }
 
-.main{
-  height: 150px;
-  width: 100vw;
-  background-color: crimson;
-  border-radius: 20px;
-  overflow: hidden;
-  text-align: center;
-  
-  
-}
 
-.main div{
-  height: 50px;
-  width: 150px;
-  background-color: aqua;
-  border-radius: 20px;
-}
+
 

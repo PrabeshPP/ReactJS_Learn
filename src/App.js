@@ -4,12 +4,12 @@ import ExpenseItem from './components/ExpenseItem';
 
 function App() {
   return (
-    <>
+   
     <div className='main'>
    <div>Add new Expense</div>
    <ExpenseItem/>
     </div>
-    </>
+    
   );
 }
 

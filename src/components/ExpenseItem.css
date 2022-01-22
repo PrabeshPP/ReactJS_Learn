@@ -1,0 +1,7 @@
+.ExpenseItem-main{
+    height: 10vh;
+    width:80vh ;
+    background-color: crimson;
+    display: flex;
+    justify-content: space-between;
+}
