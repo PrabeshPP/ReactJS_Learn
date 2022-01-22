@@ -40,3 +40,16 @@
     border: 2px white solid;
 }
 
+.ExpenseItem-date{
+    height:12vh;
+    width: 8vw;
+    background-color: rgb(5, 28, 41);
+    align-items: center;
+    border-radius: 12px;
+    border: 2px aqua solid ;
+    color: white;
+    text-align: center;
+    text-size-adjust: none;
+    text-size-adjust: auto;
+}
+
