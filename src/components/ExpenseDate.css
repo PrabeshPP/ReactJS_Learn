@@ -11,3 +11,12 @@
     text-size-adjust: auto;
     
 }
+
+.ExpenseItem-date__month{
+    font-size: 16px;
+    font-weight: bold;
+}
+.ExpenseItem-date__day{
+    font-size: 22px;
+    font-weight: bold;
+}
