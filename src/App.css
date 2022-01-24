@@ -10,9 +10,9 @@
 
 .App-main1{
   margin-top: 5vh;
-  height: 75vh;
+ 
   width: 65vw;
-  background-color: aqua;
+  background-color:black;
   columns: auto;
   border-radius: 16px;
  display: flex;
