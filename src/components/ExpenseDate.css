@@ -12,10 +12,12 @@
 }
 
 .ExpenseItem-date__month{
-    font-size: 16px;
+    font-size: 1vw;
     font-weight: bold;
+    font-size-adjust: 0.58;
 }
 .ExpenseItem-date__day{
-    font-size: 22px;
+    font-size: 2vw;
     font-weight: bold;
+    font-size-adjust: 0.58;
 }
