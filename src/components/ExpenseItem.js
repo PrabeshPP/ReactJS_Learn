@@ -3,8 +3,6 @@ import './ExpenseItem.css'
 import ExpenseDate from './ExpenseDate';
 
 function ExpenseItem(props){
-    
-   
     return (
         <div className="ExpenseItem-main">
         <ExpenseDate date={props.date}/>    
