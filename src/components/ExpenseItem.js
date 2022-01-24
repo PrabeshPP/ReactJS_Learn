@@ -11,6 +11,7 @@ function ExpenseItem(props){
        <div className="ExpenseItem-amount">{"$"+props.amount}</div>
        </div>
         </div>
+    
     );
 
 }
