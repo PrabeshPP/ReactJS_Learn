@@ -1,6 +1,10 @@
+import React from "react";
+import "./NewExpense.css";
+import Form from "./Form";
+
 const NewExpense=()=>{
     return (
-        <div>
+        <div className="NewExpense">
             <form>
                 <input>Date</input>
                 <input>Title</input>
