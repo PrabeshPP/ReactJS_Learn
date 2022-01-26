@@ -1,0 +1,61 @@
+.Form{
+   position: relative;
+}
+
+.Form-title{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 2vw;
+    
+}
+
+.Form-title label{
+    font-size: 1.4vw;
+    color: white;
+    font-weight: bold;
+}
+
+.Form-amount{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 2vw;
+    
+}
+
+.Form-amount label{
+    font-size: 1.4vw;
+    color: white;
+    font-weight: bold;
+}
+
+.Form-date{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4vw;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    left: 2vw;
+    top: 12vh;
+      
+
+}
+
+
+
+
+.Form-Button button{
+    height: 7vh;
+    width: 10vw;
+   background-color: crimson;
+   border-radius: 20px;
+   font-size: 1.5vw;
+   font-weight: bold;
+   color: white;
+   position: absolute;
+   right: 3vw;
+   top:18vh ;
+
+}
