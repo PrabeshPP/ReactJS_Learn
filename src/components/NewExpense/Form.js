@@ -2,7 +2,7 @@ import React from "react";
 
 const Form=()=>{
     return (
-        <Form>
+       <form>
             <div className="Form">
                 <div className="Form-date">
                     <label>Date</label>
@@ -24,7 +24,7 @@ const Form=()=>{
             
             
 
-        </Form>
+        </form>
     )
 }
 
