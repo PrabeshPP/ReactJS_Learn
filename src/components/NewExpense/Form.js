@@ -2,23 +2,43 @@ import React, {useState} from "react";
 import './Form.css';
 
 const Form=()=>{
-    const [enteredTitle,setTitle]=useState("");
+    
+const[userInput,setUserInput] =useState({
+        enteredTitle:" ",
+        enteredAmount:" ",
+        enteredDate:" "
+
+    })
+
+
     const title_change=(event)=>{
-        setTitle(event.target.value);
+        setUserInput({
+            ...userInput,
+            enteredTitle:event.target.value
+
+        });
     
 
     }
 
-    const [enteredAmount,setAmount]=useState(0);
+    
 
     const amount_change=(event)=>{
-        setAmount(event.target.value);
+        setUserInput({
+            ...userInput,
+            enteredTitle:event.target.value
+
+        });
         
     }
 
-    const [enteredDate,setDate]=useState("");
+   
     const date_change=(event)=>{
-        setDate(event.target.value);
+        setUserInput({
+            ...userInput,
+            enteredTitle:event.target.value
+
+        });
         
     }
     return (
