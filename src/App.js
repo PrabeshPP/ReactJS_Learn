@@ -1,7 +1,8 @@
 import './App.css';
-import React  from 'react';
+import React ,{useState} from 'react';
 import ExpenseItem from './components/Expenses/ExpenseItem';
 import NewExpense from './components/NewExpense/NewExpense';
+import ExpensesFilter from './components/Expenses/ExpenseFilter';
 
 
 function App() {
@@ -28,10 +29,19 @@ function App() {
     console.log(ExpenseData);
 
   }
+
+  const [filteredYear,setFilteredYear]=useState('2020');
+  const filterChangeHandler=(selectedYear)=>{
+    setFilteredYear(selectedYear);
+
+
+  }
+
   return (
    
     <div className='main'>
 <NewExpense onNewExpense={addExpenseHandler}/>
+
    <div className='App-main1'>
    <ExpenseItem title={expenses[0].title} amount={expenses[0].amount} date={expenses[0].date}/>
    <ExpenseItem title={expenses[1].title} amount={expenses[1].amount} date={expenses[1].date}/>
