@@ -12,9 +12,13 @@ const[userInput,setUserInput] =useState({
 
 
     const title_change=(event)=>{
-        setUserInput({
-            ...userInput,
-            enteredTitle:event.target.value
+        setUserInput((previousState)=>{
+            return {
+                ...previousState
+                ,
+                enteredTitle:event.target.value
+            };
+
 
         });
     
@@ -24,21 +28,31 @@ const[userInput,setUserInput] =useState({
     
 
     const amount_change=(event)=>{
-        setUserInput({
-            ...userInput,
-            enteredTitle:event.target.value
+        setUserInput((previousState)=>{
+            return {
+                ...previousState
+                ,
+                enteredAmount:event.target.value
+            };
+
 
         });
+    
         
     }
 
    
     const date_change=(event)=>{
-        setUserInput({
-            ...userInput,
-            enteredTitle:event.target.value
+        setUserInput((previousState)=>{
+            return {
+                ...previousState
+                ,
+                enteredDate:event.target.value
+            };
+
 
         });
+    
         
     }
     return (
