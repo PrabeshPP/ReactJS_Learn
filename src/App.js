@@ -5,7 +5,7 @@ import NewExpense from './components/NewExpense/NewExpense';
 
 
 function App() {
-  const expenses=[
+ let expenses=[
     {
       title:"Toilet Paper",
       amount:94.12,
@@ -22,10 +22,16 @@ function App() {
       date:new Date(2020,7,16)
     }
   ]
+
+  const addExpenseHandler=(ExpenseData)=>{
+    console.log("In app.js");
+    console.log(ExpenseData);
+
+  }
   return (
    
     <div className='main'>
-<NewExpense/>
+<NewExpense onNewExpense={addExpenseHandler}/>
    <div className='App-main1'>
    <ExpenseItem title={expenses[0].title} amount={expenses[0].amount} date={expenses[0].date}/>
    <ExpenseItem title={expenses[1].title} amount={expenses[1].amount} date={expenses[1].date}/>

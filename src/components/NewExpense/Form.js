@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import './Form.css';
 
-const Form=()=>{
+const Form=(props)=>{
     
 const[userInput,setUserInput] =useState({
         enteredTitle:" ",
@@ -55,21 +55,44 @@ const[userInput,setUserInput] =useState({
     
         
     }
+
+    const submitHandler=(event)=>{
+        event.preventDefault();
+        const expenseData={
+            title:userInput.enteredTitle,
+            amount:userInput.enteredAmount,
+            date:new Date(userInput.enteredDate),
+        };
+
+        props.onSaveExpenseData(expenseData);
+        setUserInput((previousState)=>{
+            return {
+                enteredTitle:" ",
+                enteredAmount:" ",
+                enteredDate:" ",
+            };
+
+
+        });
+        
+    }
+
+
     return (
-       <form>
+       <form onSubmit={submitHandler}>
             <div className="Form">
                 
                 <div className="Form-title">
                     <label>Title</label>
-                    <input type={"text"} onChange={title_change} />
+                    <input type={"text"} value={userInput.enteredTitle} onChange={title_change} />
                 </div>
                 <div className="Form-amount">
                     <label>Amount</label>
-                    <input type={"number"} min={"0.01"} step={"0.01"} onChange={amount_change} />
+                    <input type={"number"} value={userInput.enteredAmount} min={"0.01"} step={"0.01"} onChange={amount_change} />
                 </div>
                 <div className="Form-date">
                     <label>Date</label>
-                    <input type={"date"} min={"2019-01-01"} max={"2022-26-1"} onChange={date_change} />
+                    <input type={"date"} value={userInput.enteredDate} min={"2019-01-01"} max={"2022-26-1"} onChange={date_change} />
                 </div>
                 <div className="Form-Button">
                     <button type="submit">Add Expense</button>
