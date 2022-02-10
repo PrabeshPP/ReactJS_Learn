@@ -41,7 +41,8 @@ function App() {
   selected={filteredYear}
   onChangeFilter={filterChangeHandler}
   />
-   {filteredExpenses.length==0? <h3>No Expenses</h3>:filteredExpenses.map((item)=>(
+  {filteredExpenses.length==0 && <h3>No Expenses</h3>}
+   {filteredExpenses.length>0 && filteredExpenses.map((item)=>(
   
      <ExpenseItem 
      key={item.id}
