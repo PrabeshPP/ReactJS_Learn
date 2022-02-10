@@ -3,30 +3,23 @@ import React ,{useState} from 'react';
 import ExpenseItem from './components/Expenses/ExpenseItem';
 import NewExpense from './components/NewExpense/NewExpense';
 import ExpensesFilter from './components/Expenses/ExpenseFilter';
+let dummy_expenses=[
+ 
+]
+
+
 
 
 function App() {
- let expenses=[
-    {
-      title:"Toilet Paper",
-      amount:94.12,
-      date:new Date(2020,7,14)
-    },
-    {
-      title:"Ryzen Laptop",
-      amount:1000,
-      date:new Date(2020,7,15)
-    },
-    {
-      title:"PS5",
-      amount:500,
-      date:new Date(2020,7,16)
-    }
-  ]
-
+ let [expenses,newExpenses]=useState(dummy_expenses);
+ 
   const addExpenseHandler=(ExpenseData)=>{
-    console.log("In app.js");
-    console.log(ExpenseData);
+   newExpenses((previousState)=>{
+    
+     return [ExpenseData,...previousState];
+     
+   });
+  
 
   }
 
@@ -43,8 +36,10 @@ function App() {
    <div className='App-main1'>
   <ExpensesFilter/>
    {expenses.map((item)=>(
+  
      <ExpenseItem 
      title={item.title}
+
      amount={item.amount}
      date={item.date}/>
    ))}
