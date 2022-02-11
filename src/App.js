@@ -3,6 +3,7 @@ import React ,{useState} from 'react';
 import ExpenseItem from './components/Expenses/ExpenseItem';
 import NewExpense from './components/NewExpense/NewExpense';
 import ExpensesFilter from './components/Expenses/ExpenseFilter';
+import ExpensesChart from './components/Expenses/ExpensesChart';
 let dummy_expenses=[
  
 ]
@@ -36,11 +37,13 @@ function App() {
     <div className='main'>
 <NewExpense onNewExpense={addExpenseHandler}/>
 
+
    <div className='App-main1'>
   <ExpensesFilter 
   selected={filteredYear}
   onChangeFilter={filterChangeHandler}
   />
+  <ExpensesChart expenses={filteredExpenses}/>
   {filteredExpenses.length==0 && <h3>No Expenses</h3>}
    {filteredExpenses.length>0 && filteredExpenses.map((item)=>(
   
