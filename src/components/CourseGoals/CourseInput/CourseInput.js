@@ -25,6 +25,7 @@ const CourseInput = props => {
 
     }
     props.onAddGoal(enteredValue);
+    
   };
 
   return (
