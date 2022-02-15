@@ -24,3 +24,15 @@
   border-color: #8b005d;
   
 }
+
+.form-control.invalid input{
+  border-color: red;
+  background: #fad0ec;
+
+}
+
+.form-control.invalid label{
+  color: red;
+}
+
+
