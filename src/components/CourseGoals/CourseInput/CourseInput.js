@@ -4,6 +4,8 @@ import './CourseInput.css';
 
 import styled from 'styled-components';
 
+//Styled Components
+
 const FormControl=styled.div`
 
   margin: 0.5rem 0;
@@ -44,6 +46,7 @@ const FormControl=styled.div`
 
 
 `
+//! Styled Components end
 
 const CourseInput = props => {
   const [enteredValue, setEnteredValue] = useState('');
@@ -70,7 +73,7 @@ const CourseInput = props => {
 
   return (
     <form onSubmit={formSubmitHandler}>
-      <FormControl>
+      <FormControl className={!isValid&&'invalid'}>
         <label >Course Goal</label>
         <input type="text"  onChange={goalInputChangeHandler}  />
       </FormControl>
