@@ -3,10 +3,6 @@ import Button from '../../UI/Button/Button';
 import styles from'./CourseInput.module.css';
 
 //Using CSS Styles module.
-
-
-
-
 //Styled Components
 
 // const FormControl=styled.div`
