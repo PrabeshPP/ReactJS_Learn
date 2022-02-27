@@ -12,18 +12,24 @@ const Login = (props) => {
   const [formIsValid, setFormIsValid] = useState(false);
 
   useEffect(()=>{
-    setFormIsValid(
-      enteredPassword.trim().length > 6 && enteredEmail.includes('@')
-    );
-
+    // we should use the useEffect clean up function to lower down the traffic on website while logging
+    
+    const identifier=setTimeout(()=>{
+      setFormIsValid(()=>{
+       return enteredEmail.includes('@')  && enteredPassword.trim().length > 6  ;
+      }
+    
+    )
+    },500);
+    
+    return ()=>{
+      clearTimeout(identifier);
+    };
   },[enteredEmail,enteredPassword]);
 
   const emailChangeHandler = (event) => {
     setEnteredEmail(event.target.value);
 
-    setFormIsValid(
-      event.target.value.includes('@') && enteredPassword.trim().length > 6
-    );
   };
 
   const passwordChangeHandler = (event) => {
