@@ -16,6 +16,12 @@ const emailReducer=(state,action)=>{
   return{value:'',isValid:false};
   
 }
+
+const passwordReducer=(state,action)=>{
+
+  return {value:'',isValid:false};
+
+}
 const Login = (props) => {
 
   const [enteredPassword, setEnteredPassword] = useState('');
@@ -25,7 +31,13 @@ const Login = (props) => {
   const [emailState,dispatchEmail]=useReducer(emailReducer,{
     value:'',
     isValid:null
-  },)
+  },);
+
+  const [passwordState,dispatchPassword]=useReducer(passwordReducer,{
+    value:'',
+  isValid:null});
+
+
 
   useEffect(() => {
     console.log('EFFECT RUNNING');
@@ -54,14 +66,14 @@ const Login = (props) => {
 
     setFormIsValid(
       emailState.isValid && enteredPassword.trim().length > 6
-    );
+    );s
   };
 
   const passwordChangeHandler = (event) => {
-    setEnteredPassword(event.target.value);
+    dispatchPassword({type:'USER_PASS',val:event.target.value});
 
     setFormIsValid(
-      emailState.isValid && event.target.value.trim().length > 6
+      emailState.isValid && passwordState.isValid
     );
   };
 
@@ -70,7 +82,7 @@ const Login = (props) => {
   };
 
   const validatePasswordHandler = () => {
-    setPasswordIsValid(enteredPassword.trim().length > 6);
+    dispatchPassword({type:'INPUT_BLUR'});
   };
 
   const submitHandler = (event) => {
