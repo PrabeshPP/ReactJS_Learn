@@ -72,7 +72,7 @@ const Login = (props) => {
 
     setFormIsValid(
       emailState.isValid && enteredPassword.trim().length > 6
-    );s
+    );
   };
 
   const passwordChangeHandler = (event) => {
