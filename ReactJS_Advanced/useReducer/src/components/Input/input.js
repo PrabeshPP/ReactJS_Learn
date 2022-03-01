@@ -23,7 +23,7 @@ const InputForm=React.forwardRef((props,ref)=>{
         >
           <label htmlFor={props.htmlFor}>{props.content}</label>
           <input
-          ref={props.ref}
+          ref={inputRef}
             type={props.type}
             id={props.type}
             value={props.value}
