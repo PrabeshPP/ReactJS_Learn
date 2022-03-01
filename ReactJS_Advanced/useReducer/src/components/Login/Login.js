@@ -31,7 +31,7 @@ const passwordReducer=(state,action)=>{
 }
 const Login = (props) => {
 
-  const [enteredPassword, setEnteredPassword] = useState('');
+  // const [enteredPassword, setEnteredPassword] = useState('');
   const [formIsValid, setFormIsValid] = useState(false);
 
   const [emailState,dispatchEmail]=useReducer(emailReducer,{
@@ -53,25 +53,25 @@ const Login = (props) => {
     };
   }, []);
 
-  // useEffect(() => {
-  //   const identifier = setTimeout(() => {
-  //     console.log('Checking form validity!');
-  //     setFormIsValid(
-  //       enteredEmail.includes('@') && enteredPassword.trim().length > 6
-  //     );
-  //   }, 500);
+  useEffect(() => {
+    const identifier = setTimeout(() => {
+      console.log('Checking form validity!');
+      setFormIsValid(
+       emailState.isValid && passwordState.isValid
+      );
+    }, 500);
 
-  //   return () => {
-  //     console.log('CLEANUP');
-  //     clearTimeout(identifier);
-  //   };
-  // }, [enteredEmail, enteredPassword]);
+    return () => {
+      console.log('CLEANUP');
+      clearTimeout(identifier);
+    };
+  }, [emailState, passwordState]);
 
   const emailChangeHandler = (event) => {
     dispatchEmail({type:'USER_INPUT',val:event.target.value});
 
     setFormIsValid(
-      emailState.isValid && enteredPassword.trim().length > 6
+      emailState.isValid && passwordState.isValid
     );
   };
 
