@@ -5,20 +5,18 @@ import DemoOutput from "./components/Demo/DemoOutput";
 
 function App() {
   
-  const[showParagraph,setShowParagraph]=useState(false);
-  console.log("App function is Running")
+ const[listTitle,setListTitle]=useState("My List");
 
   const toggleParagraphHandler=useCallback(
     ()=>{
-      setShowParagraph((previousShowParagraph)=>!previousShowParagraph);
+      setListTitle("New Title");
       
     },
     []
   )
   return (
     <div className="app">
-    <h1>Hi There</h1>
-      <DemoOutput show={false}/>
+      
       <Button onClick={toggleParagraphHandler}>ToggleParagraphHandler</Button>
       
     </div>
