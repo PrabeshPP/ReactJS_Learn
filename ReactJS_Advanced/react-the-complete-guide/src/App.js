@@ -1,13 +1,14 @@
 import React,{useState,useCallback} from "react";
 import './App.css';
+import DemoList from "./components/Demo/DemoList";
 import Button from "./components/UI/Button";
-import DemoOutput from "./components/Demo/DemoOutput";
+
 
 function App() {
   
  const[listTitle,setListTitle]=useState("My List");
 
-  const toggleParagraphHandler=useCallback(
+  const changeTitleHandler=useCallback(
     ()=>{
       setListTitle("New Title");
       
@@ -16,8 +17,12 @@ function App() {
   )
   return (
     <div className="app">
-      
-      <Button onClick={toggleParagraphHandler}>ToggleParagraphHandler</Button>
+    <div className="div1">
+    <DemoList title={listTitle} items={[5,3,1,10,9]}/>
+      <Button onClick={changeTitleHandler}>Change List Title</Button>
+
+    </div>
+     
       
     </div>
   );
