@@ -8,14 +8,17 @@ function App() {
   const[showParagraph,setShowParagraph]=useState(false);
   console.log("App function is Running")
 
-  const toggleParagraphHandler=()=>{
-    setShowParagraph((previousShowParagraph)=>!previousShowParagraph);
-    
-  }
+  const toggleParagraphHandler=useCallback(
+    ()=>{
+      setShowParagraph((previousShowParagraph)=>!previousShowParagraph);
+      
+    },
+    []
+  )
   return (
     <div className="app">
     <h1>Hi There</h1>
-      <DemoOutput show={showParagraph}/>
+      <DemoOutput show={false}/>
       <Button onClick={toggleParagraphHandler}>ToggleParagraphHandler</Button>
       
     </div>
