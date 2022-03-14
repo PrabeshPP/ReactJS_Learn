@@ -1,0 +1,28 @@
+.div{
+    background-color: rgb(20, 136, 236);
+    
+}
+
+
+h2{
+    color: white;
+    position: relative;
+    left: 40%;
+}
+
+
+ul{
+    list-style: none;
+    color: white;
+    position: relative;
+    left: 20%;
+}
+
+li{
+    height: 50px;
+    width: 25vw;
+    background-color: chocolate;
+    text-align: center;
+    margin: 10px;
+    border-radius: 16px;
+}
