@@ -15,7 +15,7 @@ function App() {
     setISLoading(true);
     setError(null);
     try{
-        const response=await fetch('https://swapi.dev/api/films/');
+        const response=await fetch('https://react-http-b4b85-default-rtdb.firebaseio.com/movies.json');
         
         if(response.status!=200){
           throw new Error("Unable to load the data")
