@@ -1,0 +1,2 @@
+this basic react.js file tells about the basic structure of react contstuction file by defining a class of any name suitable to the project(for reference i used hello as class) and using the constructor of argument props to control the state of the functions and variables in the project.
+and render using JSX functionalities
