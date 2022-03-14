@@ -2,6 +2,7 @@ import React,{useState,useEffect,useCallback} from 'react';
 
 import MoviesList from './components/MoviesList';
 import './App.css';
+import AddMovie from './components/AddMovie';
 
 function App() {
 
@@ -22,16 +23,17 @@ function App() {
          
         }
         const data=await response.json();
-        const transformedMovies=data.results.map((movieData)=>{
-          return {
-            id:movieData.episode_id,
-            title:movieData.title,
-            openingText:movieData.opening_crawl,
-            releaseDate:movieData.relase_date
-  
-          }
-        });
-        setMovies(transformedMovies);
+        const loadedMovies=[];
+        for(const key in data){
+          loadedMovies.push({
+            id:key,
+            title:data[key].title,
+            openingText:data[key].openingText,
+            releaseDate:data[key].releaseDate
+          })
+        }
+      
+        setMovies(loadedMovies);
        
 
     
@@ -45,6 +47,8 @@ function App() {
 
 
   },[])
+  
+  
 
 
   useEffect(()=>{
@@ -53,37 +57,23 @@ function App() {
 
   },[fetchMoviesHandler])
 
-  // async function fetchMoviesHandler(){
-    
-  
-
-     
-
-   
-  // };
-
-  
-
-
-
-
-  const dummyMovies = [
-    {
-      id: 1,
-      title: 'Some Dummy Movie',
-      openingText: 'This is the opening text of the movie',
-      releaseDate: '2021-05-18',
-    },
-    {
-      id: 2,
-      title: 'Some Dummy Movie 2',
-      openingText: 'This is the second opening text of the movie',
-      releaseDate: '2021-05-19',
-    },
-  ];
+async function addMoviehandler(movie){
+ const response= await fetch('https://react-http-b4b85-default-rtdb.firebaseio.com/movies.json',{
+    method:"POST",
+    body:JSON.stringify(movie),
+    headers:{
+      'Content-Type':'application/json'
+    }
+  });
+  const data=await response.json();
+  console.log(data);
+}
 
   return (
     <React.Fragment>
+    <section>
+      <AddMovie onAddMovie={addMoviehandler}/>
+    </section>
       <section>
         <button onClick={fetchMoviesHandler}>Fetch Movies</button>
       </section>
