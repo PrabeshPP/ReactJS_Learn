@@ -13,7 +13,7 @@ function App() {
     setError(null);
     try {
       const response = await fetch(
-        'https://react-http-b4b85-default-rtdb.firebaseio.com/'
+        'https://add-task-a9ab5-default-rtdb.firebaseio.com/task.json'
       );
 
       if (!response.ok) {
