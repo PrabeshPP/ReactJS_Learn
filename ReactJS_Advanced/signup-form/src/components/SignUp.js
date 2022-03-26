@@ -1,5 +1,7 @@
 import classes from "./SignUp.module.css";
 import useSignUP from "../customhook/useSignUP";
+import SignUPTemplate from "./SignUP/SignUP_tmp";
+
 
 const SignUp=()=>{
 
@@ -60,14 +62,16 @@ const SignUp=()=>{
 
     }
 
-    if(enteredNameisValid && enteredLastNameisValid && enteredEmailisValid){
+    if(enteredNameisValid && enteredLastNameisValid && enteredEmailisValid && enteredNumberisValid){
         formIsValid=true;
     }
 
    return <form onSubmit={onFormSubmitHandler}>
         {/* Name Field */}
         <div className={classes.box1}>
-       
+       <div className={classes.container1}>
+           <SignUPTemplate/>
+       </div>
 
        <div className={classes.container}>
        <div className={classes.box2}>
@@ -92,25 +96,11 @@ const SignUp=()=>{
         </div>
         <div>
            <label className={classes["label-email"]}>Phone Number:</label>
-           <input className={classes["input-email"]} type="number" placeholder="9810101010"/>
+           <input className={classes["input-email"]} onChange={onNumberChangehandler} onBlur={onNumberBlurChangeHandler} type="number" placeholder="9810101010"/>
+           {numberHasError && <p>number length must be 10</p>}
         </div>
 
        </div>
-       <div className={classes.box4}>
-           <label className={classes["radio-label"]}>Gender:</label>
-           <div className={classes["radio-input"]}>
-           <div className={classes["radio-input-1"]}>
-           <input value="Male" type="radio" name="gender"/>
-           <span className={classes.span}>Male</span>
-           </div>
-           <div className={classes["radio-input-1"]}>
-           <input type="radio" value="Female" name="gender" />
-           <span className={classes.span}>Female</span>
-           </div>
-           </div>
-       </div>
-
-
 
        </div>
          <div className={classes.signUP}>

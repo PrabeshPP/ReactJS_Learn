@@ -16,9 +16,17 @@
     justify-content: center;
 }
 
+.container1 img{
+    height: 35vh;
+    width: 50vw;
+    object-fit: fill;
+    
+
+}
+
 .container{
     position: absolute;
-    top: 25%;
+    top: 40%;
 }
 
 .box2{
@@ -104,40 +112,14 @@
 
 }
 
-.box4{
-    display: flex;
-    margin-left: 12%;
-    margin-top: 3%;
-    align-content: center;
-}
 
 
-.radio-input{
-    margin-left: 3%;
-    display: flex;
-    
-}
 
-.radio-input-1{
-    margin-left: 5%;
-    display: flex;
-    align-items: center;
-    
-}
-
-.radio-label{
-    font-weight: bold;
-    
-}
-
-.span{
-    font-weight: bold;
-}
 
 
 .signUP{
     position: absolute;
-    top: 55%;
+    top: 65%;
 }
 
 .signUP button{
