@@ -6,12 +6,30 @@
 .box1{
     min-height: 100vh;
     width: 50vw;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.514);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.575);
     position: absolute;
     right: 0%;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    position: absolute;
+    top: 25%;
+}
+
+.box2{
+    display: flex;
+
+}
+
+.box3{
+    display: flex;
+    margin-top: 2%;
+    justify-content: space-around;
+    
 }
     
     
@@ -22,6 +40,10 @@
     color: rgb(0, 0, 0);
     font-weight: bold;
     margin-left: 2vw;
+    color: black;
+    position: relative;
+    left: 5%;
+
 }
 
 .input {
@@ -29,6 +51,107 @@
     height:5vh;
     width: 15vw;
     border-radius: 10px;
-    
+    border: 1px solid black;
     margin-left: 2vw;
+    font-size: 2.5vh;
+    padding-left: 4%;
 } 
+
+.input:focus{
+    outline: none;
+    border: 2px solid rgb(123, 7, 255);
+}
+
+.input-email{
+    display: block;
+    height:5vh;
+    width: 15vw;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-left: 2vw;
+    font-size: 2.5vh;
+    padding-left: 2%;
+
+}
+
+
+.label-email{
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    margin-left: 2vw;
+    color: black;
+    position: relative;
+    left: 2%;
+
+}
+
+.input-email:focus{
+    outline: none;
+    border: 2px solid rgb(123, 7, 255);
+
+}
+
+.input-email::-webkit-outer-spin-button,
+.input-email::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input-email[type=number]{
+    -moz-appearance: textfield;
+
+}
+
+.box4{
+    display: flex;
+    margin-left: 12%;
+    margin-top: 3%;
+    align-content: center;
+}
+
+
+.radio-input{
+    margin-left: 3%;
+    display: flex;
+    
+}
+
+.radio-input-1{
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    
+}
+
+.radio-label{
+    font-weight: bold;
+    
+}
+
+.span{
+    font-weight: bold;
+}
+
+
+.signUP{
+    position: absolute;
+    top: 55%;
+}
+
+.signUP button{
+    height: 6vh;
+    width: 15vw;
+    border: 2px solid rgba(0, 0, 0, 0.329);
+    border-radius: 20px;
+    background-color: crimson;
+    color: white;
+    font-weight: bold;
+    
+}
+
+
+.signUP button:hover{
+    cursor: pointer;
+    background-color: teal;
+}
