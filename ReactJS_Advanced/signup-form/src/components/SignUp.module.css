@@ -148,6 +148,7 @@
     background-color: crimson;
     color: white;
     font-weight: bold;
+    margin-top:5% ;
     
 }
 
@@ -155,4 +156,19 @@
 .signUP button:hover{
     cursor: pointer;
     background-color: teal;
+}
+
+.signUP button:disabled,
+button:disabled:hover,
+button:disabled:active{
+    background-color:#ccc ;
+    cursor: not-allowed;
+    border-color:#ccc ;
+    color: black;
+}
+
+p{
+    font-size: 10px;
+    margin-left: 15%;
+    color: red;
 }
