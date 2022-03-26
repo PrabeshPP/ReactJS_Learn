@@ -17,11 +17,11 @@ const SignUp=()=>{
        <div className={classes.box2}>
            <div>
                <label className={classes.label}>First Name:</label>
-               <input className={classes.input} type="text" />
+               <input className={classes.input} type="text" placeholder="Goblin" />
            </div>
            <div>
                <label className={classes.label}>Last Name:</label>
-               <input className={classes.input} type="text" />
+               <input className={classes.input} type="text" placeholder="Prince" />
            </div>
            
        </div>
@@ -29,11 +29,11 @@ const SignUp=()=>{
        <div className={classes.box3}>
        <div>
            <label className={classes["label-email"]}>Email:</label>
-           <input className={classes["input-email"]} type="text" />
+           <input className={classes["input-email"]} type="text" placeholder="example@gmail.com" />
         </div>
         <div>
            <label className={classes["label-email"]}>Phone Number:</label>
-           <input className={classes["input-email"]} type="number" />
+           <input className={classes["input-email"]} type="number" placeholder="9810101010"/>
         </div>
 
        </div>
