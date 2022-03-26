@@ -4,6 +4,10 @@ import classes from "./SignUp.module.css";
 const SignUp=()=>{
 
 
+
+
+    
+
     const onFormSubmitHandler=(event)=>{
         event.preventDefault();
     }
