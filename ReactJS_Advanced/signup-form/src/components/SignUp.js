@@ -1,6 +1,6 @@
 import classes from "./SignUp.module.css";
 import useSignUP from "../customhook/useSignUP";
-import SignUPTemplate from "./SignUP/SignUP_tmp";
+
 
 
 const SignUp=()=>{
@@ -69,9 +69,8 @@ const SignUp=()=>{
    return <form onSubmit={onFormSubmitHandler}>
         {/* Name Field */}
         <div className={classes.box1}>
-       <div className={classes.container1}>
-           <SignUPTemplate/>
-       </div>
+         
+      <h1 className={classes.h1}>My Coin</h1>
 
        <div className={classes.container}>
        <div className={classes.box2}>
