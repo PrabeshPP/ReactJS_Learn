@@ -4,7 +4,8 @@ import img from "C:/Users/prabe/OneDrive/Desktop/ReactJS/reactJS_intro/ReactJS_A
 
 const LeftComponent=()=>{
     return(
-        <div className={classes.card}>
+        <div>
+         <div className={classes.card}>
         <div className={classes.h1}>
         <h1>My Coin</h1>
         </div>
@@ -19,6 +20,11 @@ const LeftComponent=()=>{
         </div>
         <h4 className={classes.h4}>Lord Voldemort</h4>
         </div>
+
+        <h3 className={classes.h5}>Manage your money like ultra-rich</h3>
+
+        </div>
+       
     )
 
 }
