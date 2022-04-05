@@ -21,11 +21,12 @@ const Counter = () => {
   const toggleCounterHandler = () => {
     dispatch(counterActions.toggleCounter());
   };
+  console.log(showCounter);
 
   return (
     <main className={classes.counter}>
       <h1>Redux Counter</h1>
-      {showCounter && <div className={classes.value}>{counter}</div>}
+      {true && <div className={classes.value}>{counter}</div>}
       <div>
         <button onClick={incrementHandler}>Increment</button>
         <button onClick={incrementHandler1}>Increase by 5</button>
