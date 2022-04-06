@@ -9,15 +9,15 @@ const Counter = () => {
   };
 
   const incrementHandler1 = () => {
-    dispatch(counterActions.increase(5));
+    dispatch(counterActions.increase(500));
   };
 
   const decrementHandler = () => {
     dispatch(counterActions.decrement());
   };
 
-  const counter = useSelector((state) => state.counter);
-  const showCounter = useSelector((state) => state.showCounter);
+  const counter = useSelector((state) => state.counter.counter);
+  const showCounter = useSelector((state) => state.counter.showCounter);
  
 
   const toggleCounterHandler = () => {
