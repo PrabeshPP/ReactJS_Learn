@@ -6,15 +6,13 @@ const initialState={
 
 const showCartSlice=createSlice({
     name:"counter",
-    initialState:showCart,
+    initialState:initialState,
     reducers:{
         onShowCart(state){
-            state.showCart=true;
+            state.showCart=!state.showCart;
         },
 
-        onDismiss(state){
-            state.showCart=false;
-        }
+       
     }
 
 
