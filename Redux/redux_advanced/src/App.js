@@ -3,7 +3,7 @@ import Layout from './components/Layout/Layout';
 import Products from './components/Shop/Products';
 import {useSelector} from "react-redux";
 function App() {
-  const isShown=useSelector((state)=>state.showCart);
+  const isShown=useSelector((state)=>state.ui.showCart);
   return (
     <Layout>
       {isShown && <Cart />}

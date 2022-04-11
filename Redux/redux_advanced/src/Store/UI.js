@@ -5,7 +5,7 @@ const initialState={
 }
 
 const showCartSlice=createSlice({
-    name:"counter",
+    name:"UI",
     initialState:initialState,
     reducers:{
         onShowCart(state){
