@@ -3,7 +3,6 @@ import Layout from "./components/Layout/Layout";
 import Products from "./components/Shop/Products";
 import { useSelector, useDispatch } from "react-redux";
 import React, { useEffect } from "react";
-import { showCartActions } from "./Store/UI";
 import Notification from "./components/UI/Notifications";
 import { fetchData, sendCartData } from "./Store/cart-actions";
 
@@ -25,7 +24,11 @@ function App() {
       return;
     }
 
-    dispatch(sendCartData(cart));
+    if(cart.changed){
+      dispatch(sendCartData(cart));
+    }
+    
+    
   }, [cart, dispatch]);
 
   return (
