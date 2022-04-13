@@ -11,7 +11,8 @@ const Notification = (props) => {
     specialClasses = classes.success;
   }
 
-  const cssClasses = `${classes.notification} ${specialClasses}`;
+  let cssClasses = `${classes.notification} ${specialClasses}`;
+  
 
   return (
     <section className={cssClasses}>

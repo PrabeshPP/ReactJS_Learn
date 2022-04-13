@@ -37,7 +37,7 @@ function App() {
 
       dispatch(
         showCartActions.showNotification({
-          status: "Success",
+          status: "success",
           title: "Success!",
           message: "Sent Cart Data Successfully!",
         })
@@ -52,7 +52,7 @@ function App() {
     sentData().catch((err) =>
       dispatch(
         showCartActions.showNotification({
-          status: "Error",
+          status: "error",
           title: "Error!",
           message: "Could not Sent Cart Data Successfully!",
         })
