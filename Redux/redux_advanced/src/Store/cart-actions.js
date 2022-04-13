@@ -1,4 +1,35 @@
 import { showCartActions } from "./UI";
+import { cartSliceAction } from "./cart-slice";
+
+export const fetchData=()=>{
+    return async (dispatch)=>{
+        const fetchCart=async()=>{
+            const response=await fetch( "https://foodapp-c413b-default-rtdb.firebaseio.com/cart.json");
+            if(!response.ok){
+                throw new Response("unable to fetch the data!");
+            }
+
+            const data=await response.json();
+
+            return data;
+        }
+
+        try{
+            const data=await fetchCart();
+            dispatch(cartSliceAction.replaceCart(data));
+        }catch(err){
+            dispatch(
+                showCartActions.showNotification({
+                  status: "error",
+                  title: "Error!",
+                  message: "Fetching Cart Data Failed!",
+                })
+              )
+
+        }
+
+    }
+}
 
 export const sendCartData = (cart) => {
     return async (dispatch) => {
