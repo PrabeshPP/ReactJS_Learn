@@ -2,7 +2,7 @@ import {createSlice } from "@reduxjs/toolkit";
 
 const initialState={
     showCart:false,
-    notificaton:null
+    notification:null
 }
 
 const showCartSlice=createSlice({
@@ -14,7 +14,7 @@ const showCartSlice=createSlice({
         },
 
         showNotification(state,action){
-            state.notificaton={
+            state.notification={
                 status:action.payload.status,
                 title:action.payload.title,
                 message:action.payload.message,
