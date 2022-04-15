@@ -6,8 +6,8 @@ const MainHeader=()=>{
         <header className={classes.header}>
             <nav>
                 <ul>
-                    <li ><NavLink className={({ isActive }) =>(isActive && classes.active)} to="/w">Welcome</NavLink></li>
-                    <li><NavLink className={({ isActive }) =>(isActive && classes.active)}to="/p">Products</NavLink></li>
+                    <li ><NavLink className={({ isActive }) =>(isActive && classes.active)} to="/">Welcome</NavLink></li>
+                    <li><NavLink className={({ isActive }) =>(isActive && classes.active)}to="/product">Products</NavLink></li>
                 </ul>
             </nav>
         </header>
