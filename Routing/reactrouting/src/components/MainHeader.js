@@ -6,8 +6,9 @@ const MainHeader=()=>{
         <header className={classes.header}>
             <nav>
                 <ul>
-                    <li ><NavLink className={({ isActive }) =>(isActive && classes.active)} to="/">Welcome</NavLink></li>
-                    <li><NavLink className={({ isActive }) =>(isActive && classes.active)}to="/product">Products</NavLink></li>
+                {/* //Provide Condition instead of the Truthy statement */}
+                    <li ><NavLink className={({ isActive }) =>(isActive? classes.active :null)} to="/welcome">Welcome</NavLink></li>
+                    <li><NavLink className={({ isActive }) =>(isActive?classes.active:null)}to="/product">Products</NavLink></li>
                 </ul>
             </nav>
         </header>
