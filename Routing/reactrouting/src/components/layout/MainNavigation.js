@@ -1,5 +1,5 @@
 import classes from "./MainNavigation.module.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const MainNavigation=()=>{
     return (
@@ -7,8 +7,8 @@ const MainNavigation=()=>{
         <div className={classes.logo}>Great Quotes</div>
         <nav className={classes.nav}>
             <ul>
-                <li><Link to="/quotes" >AllQuotes</Link></li>
-                <li><Link to="/new-quote" >NewQuotes</Link></li>
+                <li><NavLink className={({isActive})=>isActive?classes.active:"null"} to="/quotes" >AllQuotes</NavLink></li>
+                <li><NavLink className={({isActive})=>isActive?classes.active:"null"} to="/new-quote" >NewQuotes</NavLink></li>
             </ul>
         </nav>
 
