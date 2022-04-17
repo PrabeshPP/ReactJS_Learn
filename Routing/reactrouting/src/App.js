@@ -3,13 +3,13 @@ import AllQuotes from "./pages/AllQuotes";
 import DetailQuote from "./pages/DetailQuote";
 import NewQuote from "./pages/NewQuote";
 import Comments from "./components/comments/Comments";
-import MainNavigation from "./components/layout/MainNavigation";
 import React from "react";
+import Layout from "./components/layout/Layout";
 
 function App() {
   return (
-   <React.Fragment>
-   <MainNavigation/>
+   <Layout>
+   
      <Routes>
    <Route path="/" element={<Navigate to="/quotes" />}/>
      <Route  path="/quotes" element={<AllQuotes/>} />
@@ -18,7 +18,7 @@ function App() {
      </Route>
      <Route path="/new-quote" element={<NewQuote/>} />
    </Routes>
-   </React.Fragment>
+   </Layout>
   );
 }
 
