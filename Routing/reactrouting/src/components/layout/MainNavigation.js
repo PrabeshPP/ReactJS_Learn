@@ -7,8 +7,8 @@ const MainNavigation=()=>{
         <div className={classes.logo}>Great Quotes</div>
         <nav className={classes.nav}>
             <ul>
-                <li><NavLink className={({isActive})=>isActive?classes.active:"null"} to="/quotes" >AllQuotes</NavLink></li>
-                <li><NavLink className={({isActive})=>isActive?classes.active:"null"} to="/new-quote" >NewQuotes</NavLink></li>
+                <li><NavLink className={({isActive})=>isActive?classes.active:"null"} to="/quotes" >All Quotes</NavLink></li>
+                <li><NavLink className={({isActive})=>isActive?classes.active:"null"} to="/new-quote" >Add a Quote</NavLink></li>
             </ul>
         </nav>
 
