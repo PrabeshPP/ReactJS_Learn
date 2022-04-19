@@ -1,6 +1,8 @@
 import React from "react";
-import {useParams,Outlet} from "react-router-dom";
+import {useParams,Outlet,Routes,Route,Link} from "react-router-dom";
 import HighlightedQuote from "../components/quotes/HighlightedQuote";
+import LoadComments from "../components/UI/LoadComments";
+import Comments from "../components/comments/Comments";
 
 const Dummy_Data = [
     { id: "q1", author: "Prabesh", text: "Winner never quit!!" },
@@ -17,9 +19,14 @@ const DetailQuote=()=>{
     return(
         <React.Fragment>
             <HighlightedQuote text={quote.text} author={quote.author}/>
-           
+            <Routes>
+                <Route path="" element={<LoadComments quoteId={params.quoteId}/>}/>
+                <Route path="comments" element={<Comments/>} />
+               
+            </Routes>
             
-            <Outlet/>
+         
+           
         </React.Fragment>
     )
 

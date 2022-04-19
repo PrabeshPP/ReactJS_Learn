@@ -15,9 +15,9 @@ function App() {
    <Route path="/" element={<Navigate to="/quotes" />}/>
   
      <Route  path="/quotes" element={<AllQuotes/>} />
-     <Route path="/quotes/:quoteId/*" element={<DetailQuote/>} >
-      <Route path="comments" element={<Comments/>} />
-     </Route>
+     <Route path="/quotes/:quoteId/*" element={<DetailQuote/>} />
+      
+    
      <Route path="/new-quote" element={<NewQuote/>} />
      <Route path="*" element={<NotFound/>}/>
    </Routes>
