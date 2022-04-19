@@ -1,11 +1,19 @@
 import { Fragment } from 'react';
-
+import { useNavigate } from 'react-router-dom';
 import QuoteItem from './QuoteItem';
 import classes from './QuoteList.module.css';
 
 const QuoteList = (props) => {
+  const navigate=useNavigate();
+  const changeSortingHandler=()=>{
+        navigate("/quotes?sort=asc");
+
+  }
   return (
     <Fragment>
+    <div className={classes.sorting}>
+      <button onClick={changeSortingHandler}>Sort Ascending</button>
+    </div>
       <ul className={classes.list}>
         {props.quotes.map((quote) => (
           <QuoteItem
