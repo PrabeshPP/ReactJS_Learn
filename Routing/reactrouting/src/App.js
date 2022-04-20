@@ -14,8 +14,8 @@ function App() {
      <Routes>
    <Route path="/" element={<Navigate to="/quotes" />}/>
   
-     <Route  path="/quotes" element={<AllQuotes/>} />
-     <Route path="/quotes/:quoteId/*" element={<DetailQuote/>} />
+     <Route  path="/quote" element={<AllQuotes/>} />
+     <Route path="/quote/:quoteId/*" element={<DetailQuote/>} />
       
     
      <Route path="/new-quote" element={<NewQuote/>} />

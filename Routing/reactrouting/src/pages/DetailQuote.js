@@ -1,5 +1,5 @@
 import React from "react";
-import {useParams,Outlet,Routes,Route,Link} from "react-router-dom";
+import {useParams,Routes,Route} from "react-router-dom";
 import HighlightedQuote from "../components/quotes/HighlightedQuote";
 import LoadComments from "../components/UI/LoadComments";
 import Comments from "../components/comments/Comments";
@@ -13,6 +13,7 @@ const DetailQuote=()=>{
 
     const params=useParams();
     const quote=Dummy_Data.find((item)=>item.id===params.quoteId);
+    
         if(!quote){
             return <p>No QuoteFound!!</p>
         }
