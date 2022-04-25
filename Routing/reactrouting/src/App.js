@@ -15,7 +15,7 @@ function App() {
    <Layout>
     <Suspense fallback={<p>Loading......</p>}>
      <Routes>
-   <Route path="/" element={<Navigate to="/quotes" />}/>
+   <Route path="/" element={<Navigate to="/quote" />}/>
   
      <Route  path="/quote" element={<AllQuotes/>} />
      <Route path="/quote/:quoteId/*" element={<DetailQuote/>} />
